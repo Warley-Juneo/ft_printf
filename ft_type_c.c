@@ -6,13 +6,13 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:34:44 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:34:56 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:52:32 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_result_c(const char **str, int ap)
+int	ft_type_c(const char **str, int ap)
 {
 	write(1, &ap, 1);
 	(*str)++;

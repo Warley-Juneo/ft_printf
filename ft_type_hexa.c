@@ -6,13 +6,13 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:35:53 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:36:13 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:52:52 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_result_hexa(const char **str, unsigned int ap)
+int	ft_type_hexa(const char **str, unsigned int ap)
 {
 	char	*number;
 	int		result;

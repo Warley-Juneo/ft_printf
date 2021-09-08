@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 03:43:15 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:02:22 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 18:23:29 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_itoa(int n)
 	is_neg = (n < 0);
 	if (n == 0)
 		return (ft_strdup("0"));
-	str = ft_calloc(count_digit + is_neg, sizeof(char));
+	str = ft_calloc((count_digit + 1) + is_neg, sizeof(char));
 	if (!str)
 		return (NULL);
 	count = 0;

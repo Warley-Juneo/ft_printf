@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:50:00 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:09:48 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 18:34:23 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -496,7 +496,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 void	ft_rev(char *str);
 
-int		ft_count_digit(int n);
+int	ft_count_digit(long int n);
 
 void	ft_free_ptr(char **ptr);
 

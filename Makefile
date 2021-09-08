@@ -1,7 +1,8 @@
 LIBFT_PATH =./libft
 LIBFT =		$(LIBFT_PATH)/libft.a
 
-SOURCES =	ft_printf.c
+SOURCES =	ft_type_c.c ft_type_char.c ft_type_hexa.c ft_type_int.c
+SOURCES +=	ft_type_pointer.c ft_type_u.c ft_printf.c
 
 OBJECTS =	$(SOURCES:.c=.o)
 
@@ -25,6 +26,7 @@ $(NAME):	 $(OBJECTS)
 
 $(LIBFT):
 			$(MAKE) -C $(LIBFT_PATH)
+			$(MAKE) -C $(LIBFT_PATH) bonus
 
 clean:
 			$(MAKE) -C $(LIBFT_PATH) clean

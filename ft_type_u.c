@@ -6,13 +6,13 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:35:32 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:35:40 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 14:54:06 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_result_u(const char **str, unsigned int ap)
+int	ft_type_u(const char **str, unsigned int ap)
 {
 	char	*number;
 	int		result;

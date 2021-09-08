@@ -6,13 +6,13 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:36:35 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 14:36:45 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 16:15:44 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_result_pointer(const char **str, unsigned long ap)
+int	ft_type_pointer(const char **str, unsigned long ap)
 {
 	char	*number;
 	int		result;
@@ -23,5 +23,5 @@ int	ft_print_result_pointer(const char **str, unsigned long ap)
 	while(*number)
 		write(1, number++, 1);
 	(*str)++;
-	return (result);
+	return (result - 1);
 }
