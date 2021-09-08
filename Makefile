@@ -1,38 +1,42 @@
-LIBFT_PATH		= ./libft
+LIBFT_PATH =./libft
+LIBFT =		$(LIBFT_PATH)/libft.a
 
-LIBFT			= $(LIBFT_PATH)/libft.a
-NAME			= libftprintf.a
+SOURCES =	ft_printf.c
 
-SOURCES 		= ft_printf_utils.c ft_printf_utils2.c ft_printf.c
-OBJECTS			= $(SOURCES:.c=.o)
+OBJECTS =	$(SOURCES:.c=.o)
 
-CC				= clang
-CFLAGS			= -Wall -Wextra -Werror
+NAME =		libftprintf.a
 
-ARFLAGS 		= rcs
-AR				= ar
-RM				= rm -f
+CC =		clang
+CGLAGS =	-Wextra -Wall -Werror
+
+ARFLAGS =	rcs
+AR =		ar
+RM =		rm -f
 
 .c.o:
-				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I $(LIBFT_PATH)
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I $(LIBFT_PATH)
 
-all:			$(LIBFT) $(NAME)
+all:		$(LIBFT) $(NAME)
 
-$(NAME):		$(OBJECTS)
-				cp $(LIBFT) $(NAME)
-				$(AR) $(ARFLAGS) $(NAME) $(OBJECTS)
+$(NAME):	 $(OBJECTS)
+			cp	$(LIBFT) $(NAME)
+			$(AR) $(ARFLAGS) $(NAME) $(OBJECTS)
 
 $(LIBFT):
-				$(MAKE) -C $(LIBFT_PATH)
+			$(MAKE) -C $(LIBFT_PATH)
 
 clean:
-				$(MAKE) -C $(LIBFT_PATH) clean
-				$(RM) $(OBJECTS)
+			$(MAKE) -C $(LIBFT_PATH) clean
+			$(RM) $(OBJECTS)
 
-fclean:			clean
-				$(MAKE) -C $(LIBFT_PATH) fclean
-				$(RM) $(NAME)
+fclean:		clean
+			$(MAKE) -C $(LIBFT_PATH) fclean
+			$(RM) $(NAME)
 
-re:				fclean all
+re:			fclean all
 
-.PHONY:			all clean fclean re
+exe:
+			clear && clang ft_printf.c libftprintf.a && ./a.out
+
+.PHONY:		all clean fclean re libft

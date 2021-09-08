@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 15:49:06 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/07/29 15:49:07 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 14:08:58 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 14:09:04 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_itoa_base(unsigned long int n, char *hex)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*str;
+	size_t	count;
+	size_t	count_digit;
+	int		base;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if ((char *)d <= (char *)s)
+	base = ft_strlen(hex);
+	count_digit = ft_count_digit(n);
+	if (n == 0)
+		return (ft_strdup("0"));
+	str = ft_calloc(count_digit, sizeof(char));
+	if (!str)
+		return (NULL);
+	count = 0;
+	while (n != 0)
 	{
-		while (n--)
-			*d++ = *s++;
+		str[count++] = hex[n % base];
+		n = (n / base);
 	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+	ft_rev(str);
+	return (str);
 }

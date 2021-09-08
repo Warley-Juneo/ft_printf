@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_rev.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 15:49:06 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/07/29 15:49:07 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 13:58:30 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 13:58:43 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_rev(char *str)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	size_t	length;
+	size_t	i;
+	char	tmp;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if ((char *)d <= (char *)s)
+	length = ft_strlen(str) - 1;
+	i = 0;
+	while (str[i] && i < length)
 	{
-		while (n--)
-			*d++ = *s++;
+		tmp = str[i];
+		str[i] = str[length];
+		str[length] = tmp;
+		i++;
+		length--;
 	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
 }

@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_type_u.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 15:49:06 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/07/29 15:49:07 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 14:35:32 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 14:35:40 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_print_result_u(const char **str, unsigned int ap)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*number;
+	int		result;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if ((char *)d <= (char *)s)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+	result = ft_count_digit(ap);
+	number = ft_itoa(ap);
+	while(*number)
+		write(1, number++, 1);
+	(*str)++;
+	return (result);
 }

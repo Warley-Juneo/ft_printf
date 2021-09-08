@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_count_digit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 15:49:06 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/07/29 15:49:07 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 13:59:42 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 13:59:53 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_count_digit(int n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	int	count;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if ((char *)d <= (char *)s)
+	count = 0;
+	while (n != 0)
 	{
-		while (n--)
-			*d++ = *s++;
+		count++;
+		n = n / 10;
 	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+	return (count + 1);
 }

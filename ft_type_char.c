@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_type_char.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 15:49:06 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/07/29 15:49:07 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 14:33:48 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 14:34:11 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_print_result_char(const char **str, char *ap)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	int	result;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
-		return (dest);
-	if ((char *)d <= (char *)s)
-	{
-		while (n--)
-			*d++ = *s++;
-	}
-	else
-	{
-		d += n;
-		s += n;
-		while (n--)
-			*--d = *--s;
-	}
-	return (dest);
+	result = ft_strlen(ap);
+	while (*ap)
+		write(1, ap++, 1);
+	(*str)++;
+	return (result);
 }

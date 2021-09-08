@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/08 01:50:37 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 02:04:31 by wjuneo-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	size_t		count;
 	int			flag;
@@ -35,16 +47,16 @@ int ft_printf(const char *str, ...)
 	return (0);
 }
 
-int main (void)
-{
-	unsigned long int	i;
-	i = 550;
+// int main (void)
+// {
+// 	unsigned long int	i;
+// 	i = 550;
 
-	ft_printf("A minha string é: = %s\n", "Weltom");
-	ft_printf("O meu caracter é: = %c\n", 'W');
-	ft_printf("O meu número é:   = %d\n", 14510);
-	ft_printf("O meu número é:   = %i\n", 14510);
-	ft_printf("O meu número é:   = %u\n", 500);
-	ft_printf("O meu ptr é: 	 = &p\n", &i);
-	ft_printf("Imprimindo o % em:  %%\n");
-}
+// 	ft_printf("A minha string é: = %s\n", "Weltom");
+// 	ft_printf("O meu caracter é: = %c\n", 'W');
+// 	ft_printf("O meu número é:   = %d\n", 14510);
+// 	ft_printf("O meu número é:   = %i\n", 14510);
+// 	ft_printf("O meu número é:   = %u\n", 500);
+// 	ft_printf("O meu ptr é: 	 = &p\n", &i);
+// 	ft_printf("Imprimindo o % em:  %%\n");
+// }
