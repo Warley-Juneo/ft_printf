@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_count_digit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 14:08:58 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 20:58:43 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 13:59:42 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 20:45:01 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa_base(unsigned long int n, char *hex)
+int	ft_count_digit_base(unsigned long int n)
 {
-	char	*str;
-	size_t	count;
-	size_t	count_digit;
-	int		base;
+	int	count;
 
-	base = ft_strlen(hex);
-	count_digit = ft_count_digit_base(n);
-	if (n == 0)
-		return (ft_strdup("0"));
-	str = ft_calloc(count_digit + 1, sizeof(char));
-	if (!str)
-		return (NULL);
 	count = 0;
+	if (n == 0)
+		return (1);
 	while (n != 0)
 	{
-		str[count++] = hex[n % base];
-		n = (n / base);
+		count++;
+		n = n / 16;
 	}
-	ft_rev(str);
-	return (str);
+	return (count);
 }

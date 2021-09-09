@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 15:50:00 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 18:34:23 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 20:49:07 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -305,7 +305,7 @@ void	*ft_memset(void *dest, int c, size_t len);
  * @param n The integer to convert.
  * @return The string representing the integer. NULL if the allocation fails.
  */
-char	*ft_itoa(int n);
+char	*ft_itoa(long int n);
 
 /**
  * @brief Allocates (with malloc(3)) and returns a new string, which is the
@@ -496,7 +496,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 void	ft_rev(char *str);
 
-int	ft_count_digit(long int n);
+int		ft_count_digit(long int n);
+
+int		ft_count_digit_base(unsigned long int n);
 
 void	ft_free_ptr(char **ptr);
 

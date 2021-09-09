@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 03:43:15 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 18:23:29 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 20:49:32 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int
 	return (nbr);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(long int n)
 {
 	char	*str;
 	size_t	count;

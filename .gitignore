@@ -4,3 +4,4 @@ a.out
 *.a
 /ft_printf_tester
 .vscode
+printfTester

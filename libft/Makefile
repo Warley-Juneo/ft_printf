@@ -6,7 +6,7 @@
 #    By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/10 22:33:32 by wjuneo-f          #+#    #+#              #
-#    Updated: 2021/09/08 18:10:30 by wjuneo-f         ###   ########.fr        #
+#    Updated: 2021/09/08 20:48:42 by wjuneo-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SOURCES			+=	ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c
 SOURCES			+=	ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c
 SOURCES			+=	ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c
 SOURCES			+=	ft_tolower.c ft_toupper.c ft_rev.c ft_count_digit.c
-SOURCES			+=	ft_free_ptr.c ft_itoa_base.c
+SOURCES			+=	ft_free_ptr.c ft_itoa_base.c ft_count_digit_base.c
 
 
 SOURCES_BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c

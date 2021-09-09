@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_u.c                                        :+:      :+:    :+:   */
+/*   ft_type_sing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 14:35:32 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 19:04:04 by wjuneo-f         ###   ########.fr       */
+/*   Created: 2021/09/08 19:31:36 by wjuneo-f          #+#    #+#             */
+/*   Updated: 2021/09/08 21:16:27 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_type_u(const char **str, unsigned int ap)
+int	ft_type_sing (const char **str)
 {
-	char	*number;
-	int		result;
-
-	result = ft_count_digit(ap);
-	number = ft_itoa(ap);
-	if(*number)
-		ft_putstr_fd(number, 1);
+	int	result;
+	write(1, "%", 1);
 	(*str)++;
-	ft_free_ptr(&number);
-	return (result);
+	return (1);
 }

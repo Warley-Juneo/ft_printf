@@ -2,7 +2,7 @@ LIBFT_PATH =./libft
 LIBFT =		$(LIBFT_PATH)/libft.a
 
 SOURCES =	ft_type_c.c ft_type_char.c ft_type_hexa.c ft_type_int.c
-SOURCES +=	ft_type_pointer.c ft_type_u.c ft_printf.c
+SOURCES +=	ft_type_pointer.c ft_type_u.c ft_type_sing.c ft_printf.c
 
 OBJECTS =	$(SOURCES:.c=.o)
 

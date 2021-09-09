@@ -12,5 +12,6 @@ int	ft_type_hexa(const char **str, unsigned int ap);
 int	ft_type_int(const char **str, int ap);
 int	ft_type_pointer(const char **str, unsigned long ap);
 int	ft_type_u(const char **str, unsigned int ap);
+int	ft_type_sing (const char **str);
 int	ft_printf(const char *str, ...);
 #endif

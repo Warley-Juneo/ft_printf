@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 01:50:37 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 18:39:08 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:17:48 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static int	ft_check(const char c)
 {
 	if (c == 's' || c == 'c' || c == 'u' || c == 'x'
-	|| c == 'p' || c == 'd' || c == 'X' || c == 'i')
+	|| c == 'p' || c == 'd' || c == 'X' || c == 'i' || c == '%')
 		return (1);
 	return (0);
 }
@@ -28,7 +28,7 @@ int	ft_printf(const char *str, ...)
 
 	result = 0;
 	va_start(ap, str);
-	while(*str)
+	while (*str)
 	{
 		if (*str == '%' && ft_check(*(str + 1)))
 		{
@@ -45,6 +45,8 @@ int	ft_printf(const char *str, ...)
 				result += ft_type_hexa(&str, va_arg(ap, unsigned int));
 			else if (*str == 'p')
 				result += ft_type_pointer(&str, va_arg(ap, unsigned long int));
+			else if (*str == '%')
+				result += ft_type_sing(&str);
 		}
 		else
 		{
@@ -54,9 +56,3 @@ int	ft_printf(const char *str, ...)
 	}
 	return (result);
 }
-
-// int main (void)
-// {
-// 	int result;
-// 	ft_printf("%d %d", 2147483647, (int)-2147483648);
-// }
