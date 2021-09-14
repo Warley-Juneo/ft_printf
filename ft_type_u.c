@@ -6,7 +6,7 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 14:35:32 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 19:04:04 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/14 20:21:42 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_type_u(const char **str, unsigned int ap)
 
 	result = ft_count_digit(ap);
 	number = ft_itoa(ap);
-	if(*number)
+	if (*number)
 		ft_putstr_fd(number, 1);
 	(*str)++;
 	ft_free_ptr(&number);

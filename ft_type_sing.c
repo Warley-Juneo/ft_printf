@@ -6,16 +6,17 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 19:31:36 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/08 21:16:27 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/14 20:21:25 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_type_sing (const char **str)
+int	ft_type_sing(const char **str)
 {
 	int	result;
-	write(1, "%", 1);
+
+	write (1, "%", 1);
 	(*str)++;
 	return (1);
 }
