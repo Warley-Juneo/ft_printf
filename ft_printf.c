@@ -6,11 +6,10 @@
 /*   By: wjuneo-f <wjuneo-f@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 01:50:37 by wjuneo-f          #+#    #+#             */
-/*   Updated: 2021/09/09 15:10:46 by wjuneo-f         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:52:46 by wjuneo-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_printf.h"
 #include <limits.h>
 
